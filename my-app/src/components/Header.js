@@ -28,7 +28,7 @@ export const Header = () => {
                         <div className='navbar-nav ml-auto'>
                             <a className='nav-item nav-link' href='/'>Inicio</a>
                             <a className='nav-item nav-link' href='users'>Administrar usuarios <span className='sr-only'>(current)</span></a>
-                            <a className='nav-item nav-link' href='/'>Servicios de las plataformas aéreas</a>
+                            <a className='nav-item nav-link' href='services'>Servicios de las plataformas aéreas</a>
                         </div>
                     </div>
                 </div>

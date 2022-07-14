@@ -2,7 +2,17 @@ const express = require('express');
 const path = require('path');
 const app = express(),
       bodyParser = require("body-parser");
-      port = 80;
+      port = 3001;
+
+// Registro de la data cargada
+const services = {
+  totalRegistrosVuelo: 12356,
+  totalRegistrosMonitoreo: 158392,
+  registrosVuelo: 296,
+  fechaRegistrosVuelo: '13/07/2022',
+  registrosMonitoreo: 652,
+  fechaRegistrosMonitoreo: '13/07/2022',
+};
 
 // Registro de la data cargada
 const users = [
@@ -20,6 +30,11 @@ const users = [
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../my-app/build')));
+
+app.get('/api/services', (req, res) => {
+  console.log('api/services called!')
+  res.json(services);
+});
 
 app.get('/api/users', (req, res) => {
   console.log('api/users called!')
